@@ -51,7 +51,6 @@ class ViewController: UIViewController, UINavigationControllerDelegate,UIImagePi
         let green = Double((hex & 0xFF00) >> 8) / 255.0
         let blue = Double((hex & 0xFF)) / 255.0
         var myColor: UIColor = UIColor( red: CGFloat(red), green: CGFloat(green), blue: CGFloat(blue), alpha: CGFloat(1.0))
-        
         // ボタン.
         myTwitterButton = UIButton()
         myTwitterButton.frame = CGRectMake(0,0,100,100)
@@ -74,18 +73,37 @@ class ViewController: UIViewController, UINavigationControllerDelegate,UIImagePi
     // ボタンイベント.
     func onPostToTwitter(sender : AnyObject) {
         
-        // SLComposeViewControllerのインスタンス化.
-        // ServiceTypeをTwitterに指定.
-        myComposeView = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
+        if #available(iOS 8.0, *) {
+            var alert = UIAlertController(title: "いいんですね？", message: "あなたもクレイジーの仲間入り(´・∀・｀)", preferredStyle: UIAlertControllerStyle.Alert)
+            
+            alert.addAction(UIAlertAction(title: "クレイジーになる!!(´・∀・｀)", style: .Default, handler: { (action) -> Void in
+                //アラートが押された時の処理
+                // SLComposeViewControllerのインスタンス化.
+                // ServiceTypeをTwitterに指定.
+                self.myComposeView = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
+                
+                // 投稿するテキストを指定.
+                self.myComposeView.setInitialText("クレイジー画像あげるお(´・∀・｀) @kusorep_crazy")
+                
+                // 投稿する画像を指定.
+                self.myComposeView.addImage(self.imageView.image)
+                
+                // myComposeViewの画面遷移.
+                self.presentViewController(self.myComposeView, animated: true, completion: nil)
+                //self.dismissViewControllerAnimated(true, completion: nil)
+            }))
+            
+            self.presentViewController(alert, animated: true, completion: nil)
+            
+        } else {
+            // Fallback on earlier versions
+        }
         
-        // 投稿するテキストを指定.
-        myComposeView.setInitialText("クレイジー画像あげるお(´・∀・｀) @kusorep_crazy")
         
-        // 投稿する画像を指定.
-        myComposeView.addImage(imageView.image)
         
-        // myComposeViewの画面遷移.
-        self.presentViewController(myComposeView, animated: true, completion: nil)
+
+        
+
     }
     
 }
