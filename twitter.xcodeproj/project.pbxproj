@@ -13,6 +13,8 @@
 		654E2EDF1C3A54BD00F465A7 /* twitter.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 654E2EDD1C3A54BD00F465A7 /* twitter.xcdatamodeld */; };
 		654E2EE11C3A54BD00F465A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 654E2EE01C3A54BD00F465A7 /* Assets.xcassets */; };
 		654E2EE41C3A54BD00F465A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 654E2EE21C3A54BD00F465A7 /* LaunchScreen.storyboard */; };
+		654E2EEC1C3A569A00F465A7 /* sako.png in Resources */ = {isa = PBXBuildFile; fileRef = 654E2EEB1C3A569A00F465A7 /* sako.png */; };
+		654E2EEE1C3A5C6800F465A7 /* crazy.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 654E2EED1C3A5C6800F465A7 /* crazy.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		654E2EE01C3A54BD00F465A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		654E2EE31C3A54BD00F465A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		654E2EE51C3A54BD00F465A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		654E2EEB1C3A569A00F465A7 /* sako.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sako.png; path = ../../../../../Desktop/sako.png; sourceTree = "<group>"; };
+		654E2EED1C3A5C6800F465A7 /* crazy.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = crazy.jpg; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 				654E2ED81C3A54BD00F465A7 /* ViewController.swift */,
 				654E2EDA1C3A54BD00F465A7 /* Main.storyboard */,
 				654E2EE01C3A54BD00F465A7 /* Assets.xcassets */,
+				654E2EEB1C3A569A00F465A7 /* sako.png */,
+				654E2EED1C3A5C6800F465A7 /* crazy.jpg */,
 				654E2EE21C3A54BD00F465A7 /* LaunchScreen.storyboard */,
 				654E2EE51C3A54BD00F465A7 /* Info.plist */,
 				654E2EDD1C3A54BD00F465A7 /* twitter.xcdatamodeld */,
@@ -127,7 +133,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				654E2EE41C3A54BD00F465A7 /* LaunchScreen.storyboard in Resources */,
+				654E2EEC1C3A569A00F465A7 /* sako.png in Resources */,
 				654E2EE11C3A54BD00F465A7 /* Assets.xcassets in Resources */,
+				654E2EEE1C3A5C6800F465A7 /* crazy.jpg in Resources */,
 				654E2EDC1C3A54BD00F465A7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
